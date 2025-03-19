@@ -18,7 +18,7 @@ const firstLeader = [
   {
     name: "Shri Chirag Paswan",
     role: "Chairman",
-    image: Section3,
+    image: Section3, 
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -73,6 +73,7 @@ const leaders = [
     name: "Pravin Kumar",
     role: "President",
     image: PravinKumar,
+    shortMsg:'It is with great pride and responsibility that I address you....',
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -132,6 +133,7 @@ const leaders = [
     name: "Amaresh Mishra",
     role: "Secretary-General",
     image: Amresh,
+    shortMsg:'As Secretary General of BITO, I am proud to lead an...',
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -149,6 +151,7 @@ const leaders = [
     name: "Clr. Jeff Whitton FAICD",
     role: "Honorary Global Advisor",
     image: Jeff,
+    shortMsg:'Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and entrepreneur...',
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -202,6 +205,7 @@ const leaders = [
     name: "Anil Pratham",
     role: "IPS (Former DGP, Police Reforms), Gujarat",
     image: anil,
+    shortMsg:'Shri Anil Pratham, IPS, a distinguished officer and a dedicated leader...',
     modalMessage: (
       <>
         <p>
@@ -225,6 +229,7 @@ const leaders = [
     name: "Shri Ashish Mishra",
     role: "Advisor, BITO Venture Capitalist | Entrepreneur | Strategic Advisor",
     image: Ashish,
+    shortMsg:'Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist...',
     modalMessage: (
       <>
         <p>
@@ -306,7 +311,7 @@ const MeetOurVisionaryLeader = (props) => {
         </div>
       </div>
 
-      <h1 className="advisorHeading">BITO Advisors</h1>
+      <h1 className="advisorHeading py-5">BITO Advisors</h1>
 
       {/* Swiper Slider */}
       <Swiper
@@ -326,7 +331,7 @@ const MeetOurVisionaryLeader = (props) => {
           768: { slidesPerView: 2 },
         }}
         modules={[Autoplay, Pagination]}
-        className="mt-5"
+        className=""
       >
         {leaders.map((leader, index) => (
           <SwiperSlide key={index}>
@@ -351,8 +356,7 @@ const MeetOurVisionaryLeader = (props) => {
                   Dear All,
                   <br />
                   <br />
-                  It is with great pride and responsibility that I address
-                  you...
+                 {leader.shortMsg ? leader.shortMsg : "It is with great pride and responsibility that I address you"}
                 </p>
                 <div>
                   <Button

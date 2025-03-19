@@ -97,6 +97,7 @@ import uae27 from './assets/events/UAE-event/27.webp'
 import uae28 from './assets/events/UAE-event/28.webp'
 import uae29 from './assets/events/UAE-event/29.webp'
 import uae30 from './assets/events/UAE-event/30.webp'
+import OurWork from './Pages/OurWork'
 
 
 function slugify(text) {
@@ -155,6 +156,7 @@ const App = () => {
           <Route path="/bito" element={<BitoPage />} />
           <Route path="/membership-plans" element={<MembershipPlans />} />
           <Route path="/about" element={<About />} />
+          <Route path="/our-work" element={<OurWork/>}/>
           {/* Dynamic events page */}
           <Route path='/events' element={<Events events={events} />} />
           <Route path='/events/:slug' element={<EventDetails events={events} />} />

@@ -201,7 +201,7 @@ const leaders = [
     ),
   },
   // New Leaders here
-  {
+  { 
     name: "Anil Pratham",
     role: "IPS (Former DGP, Police Reforms), Gujarat",
     image: anil,

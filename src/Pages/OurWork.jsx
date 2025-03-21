@@ -11,6 +11,7 @@ import {
     BitoImage6,
     BitoImage7,
 } from '../assets'
+import keyServicesImg from '../assets/key-services.jpg'
 import {
   aboutUs,
   biharAsmitaFoundation,
@@ -146,7 +147,7 @@ const OurWork = () => {
                         </div>
                         <div className="col-12 col-md-1"></div>
                         <div className="col-12 col-md-5">
-                            <img src={Objective} alt="" width="100%" />
+                            <img src={keyServicesImg} alt="" width="100%" />
                         </div>
                     </div>
                 </section>

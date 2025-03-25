@@ -2071,3 +2071,21 @@ h6 {
 .keyBenefitsMargin{
    margin: 30px 0;
 }
+
+.bitoAdvisorHeading{
+   font-size: 5rem;
+   color:#422a1d
+}
+.bitoAdvisorCard{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.bitoAdvisorSubHead{
+   font-size: 6rem;
+   color: #a0847c;
+   line-height: 60px;
+}
+.bitAdvisorBtn{
+   margin-top: 20px;
+}

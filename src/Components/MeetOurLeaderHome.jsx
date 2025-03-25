@@ -18,7 +18,7 @@ const firstLeader = [
   {
     name: "Shri Chirag Paswan",
     role: "Chairman",
-    image: Section3, 
+    image: Section3,
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -68,12 +68,15 @@ const firstLeader = [
     ),
   },
 ];
+
+
 const leaders = [
   {
+    bitoAdvisor: false,
     name: "Pravin Kumar",
     role: "President",
     image: PravinKumar,
-    shortMsg:'It is with great pride and responsibility that I address you....',
+    shortMsg: 'It is with great pride and responsibility that I address you....',
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -130,10 +133,11 @@ const leaders = [
     ),
   },
   {
+    bitoAdvisor: false,
     name: "Amaresh Mishra",
     role: "Secretary-General",
     image: Amresh,
-    shortMsg:'As Secretary General of BITO, I am proud to lead an...',
+    shortMsg: 'As Secretary General of BITO, I am proud to lead an...',
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -148,10 +152,11 @@ const leaders = [
     ),
   },
   {
+    bitoAdvisor: false,
     name: "Clr. Jeff Whitton FAICD",
     role: "Honorary Global Advisor",
     image: Jeff,
-    shortMsg:'Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and entrepreneur...',
+    shortMsg: 'Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and entrepreneur...',
     modalMessage: (
       <>
         <p>Dear All,</p>
@@ -200,12 +205,17 @@ const leaders = [
       </>
     ),
   },
+
   // New Leaders here
-  { 
+  {
+    bitoAdvisor: true,
     name: "Anil Pratham",
+    bgColor: '#d8cec4',
     role: "IPS (Former DGP, Police Reforms), Gujarat",
     image: anil,
-    shortMsg:'Shri Anil Pratham, IPS, a distinguished officer and a dedicated leader...',
+    shortMsg: 'Shri Anil Pratham, IPS, a distinguished officer and a dedicated leader...',
+    specialTitle: 'BITO',
+    specialHeading: 'Advisors',
     modalMessage: (
       <>
         <p>
@@ -226,10 +236,14 @@ const leaders = [
     ),
   },
   {
+    bitoAdvisor: true,
     name: "Shri Ashish Mishra",
+    bgColor: '#d8cec4',
     role: "Advisor, BITO Venture Capitalist | Entrepreneur | Strategic Advisor",
     image: Ashish,
-    shortMsg:'Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist...',
+    specialTitle: 'BITO',
+    specialHeading: 'Advisors',
+    shortMsg: 'Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist...',
     modalMessage: (
       <>
         <p>
@@ -242,7 +256,7 @@ const leaders = [
           As an Advisor to BITO, he will provide thought leadership, mentorship, and strategic direction, enhancing BITO’s capabilities in fostering entrepreneurial excellence, innovation-led investments, and global partnerships.
         </p>
         <p>
-        Let’s take pride in our roots and move forward with confidence.
+          Let’s take pride in our roots and move forward with confidence.
         </p>
         <br /><br />
         <strong> Jai Bihar! Jai Bharat!</strong>
@@ -250,6 +264,7 @@ const leaders = [
     ),
   }
 ];
+
 
 const MeetOurLeaderHome = (props) => {
   const [modalData, setModalData] = useState(null);
@@ -264,7 +279,7 @@ const MeetOurLeaderHome = (props) => {
     <section className="container py-5">
       {/* DESKTOP DESIGN LAYOUT */}
       <h1 className="text-center section-3-heading d-none d-sm-block pb-5">
-      Meet Our Visionary Leaders
+        Meet Our Visionary Leaders
       </h1>
 
       {/* MOBILE DESIGN LAYOUT */}
@@ -335,7 +350,24 @@ const MeetOurLeaderHome = (props) => {
       >
         {leaders.map((leader, index) => (
           <SwiperSlide key={index}>
-            <div className="col-12">
+            {leader.bitoAdvisor ? (
+              <div className="col-12">
+                <div style={{ background: `${leader.bgColor}` }} className="president-card premond bitoAdvisorCard">
+                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center ' }}>
+                    <h2 className="bitoAdvisorHeading">{leader.specialTitle}</h2>
+                    <h3 className="bitoAdvisorSubHead">{leader.specialHeading}</h3>
+                    <Button
+                      onClick={() => handleShowModal(leader)}
+                      className="section-3-btn px-4 py-2 bitAdvisorBtn"
+                    >
+                      Explore More{" "}
+                      <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                    </Button>
+                  </div>
+
+                </div>
+              </div>
+            ) : <div className="col-12">
               <div className="president-card premond">
                 <div className="upper-title">
                   <Image
@@ -356,7 +388,7 @@ const MeetOurLeaderHome = (props) => {
                   Dear All,
                   <br />
                   <br />
-                 {leader.shortMsg ? leader.shortMsg : "It is with great pride and responsibility that I address you"}
+                  {leader.shortMsg ? leader.shortMsg : ""}
                 </p>
                 <div>
                   <Button
@@ -368,7 +400,8 @@ const MeetOurLeaderHome = (props) => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </div>}
+
           </SwiperSlide>
         ))}
       </Swiper>

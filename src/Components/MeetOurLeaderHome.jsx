@@ -4,7 +4,6 @@ import Section3 from "../assets/chirag-paswan.png";
 import PravinKumar from "../assets/praveen.jpg";
 import Amresh from "../assets/amresh.jpg";
 import Jeff from "../assets/Jheff.jpg";
-import Ashish from '../assets/ashish-mishra.jpg'
 import anil from '../assets/anil-pratham.png'
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +11,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Button, Image, Modal } from "react-bootstrap";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 // Data for the leaders
 const firstLeader = [
@@ -216,6 +216,7 @@ const leaders = [
     shortMsg: 'Shri Anil Pratham, IPS, a distinguished officer and a dedicated leader...',
     specialTitle: 'BITO',
     specialHeading: 'Advisors',
+    redirectTo: '/bito-advisors',
     modalMessage: (
       <>
         <p>
@@ -235,34 +236,7 @@ const leaders = [
       </>
     ),
   },
-  {
-    bitoAdvisor: true,
-    name: "Shri Ashish Mishra",
-    bgColor: '#d8cec4',
-    role: "Advisor, BITO Venture Capitalist | Entrepreneur | Strategic Advisor",
-    image: Ashish,
-    specialTitle: 'BITO',
-    specialHeading: 'Advisors',
-    shortMsg: 'Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist...',
-    modalMessage: (
-      <>
-        <p>
-          Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist and Entrepreneur, renowned for his contributions to the various industries including FMCG, Electric Vehicles (EV), Sports, renewable energy, and financial sectors. With a proven track record in business strategy, investment, and scaling high-growth ventures, he brings invaluable expertise to BITO’s strategic initiatives.
-        </p>
-        <p>
-          With an unwavering commitment to scalability, impact-driven investments, and cross-sectoral synergies, Shri Ashish Mishra plays a pivotal role in bridging finance, technology, and ventures. His global investment insights and strategic acumen will empower BITO to identify emerging market opportunities, foster innovation, and drive meaningful economic growth.
-        </p>
-        <p>
-          As an Advisor to BITO, he will provide thought leadership, mentorship, and strategic direction, enhancing BITO’s capabilities in fostering entrepreneurial excellence, innovation-led investments, and global partnerships.
-        </p>
-        <p>
-          Let’s take pride in our roots and move forward with confidence.
-        </p>
-        <br /><br />
-        <strong> Jai Bihar! Jai Bharat!</strong>
-      </>
-    ),
-  }
+
 ];
 
 
@@ -351,22 +325,24 @@ const MeetOurLeaderHome = (props) => {
         {leaders.map((leader, index) => (
           <SwiperSlide key={index}>
             {leader.bitoAdvisor ? (
-              <div className="col-12">
-                <div style={{ background: `${leader.bgColor}` }} className="president-card premond bitoAdvisorCard">
-                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center ' }}>
-                    <h2 className="bitoAdvisorHeading">{leader.specialTitle}</h2>
-                    <h3 className="bitoAdvisorSubHead">{leader.specialHeading}</h3>
-                    <Button
-                      onClick={() => handleShowModal(leader)}
-                      className="section-3-btn px-4 py-2 bitAdvisorBtn"
-                    >
-                      Explore More{" "}
-                      <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                    </Button>
-                  </div>
+              <Link style={{textDecoration:'none'}} to={leader.redirectTo}>
+                <div className="col-12">
+                  <div style={{ background: `${leader.bgColor}` }} className="president-card premond bitoAdvisorCard">
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center ' }}>
+                      <h2 className="bitoAdvisorHeading">{leader.specialTitle}</h2>
+                      <h3 className="bitoAdvisorSubHead">{leader.specialHeading}</h3>
+                      <Button
 
+                        className="section-3-btn px-4 py-2 bitAdvisorBtn"
+                      >
+                        Explore More{" "}
+                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                      </Button>
+                    </div>
+
+                  </div>
                 </div>
-              </div>
+              </Link> 
             ) : <div className="col-12">
               <div className="president-card premond">
                 <div className="upper-title">

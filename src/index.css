@@ -949,6 +949,24 @@ h6 {
    background: white;
 }
 
+.contactBtn {
+   background-color: #b27f4a;
+   outline: none !important;
+   border: none;
+}
+
+.contactBtn:hover {
+   background-color: #a3723d;
+   outline: none !important;
+   border: none;
+}
+
+.contactRow {
+   padding: 0 40px;
+}
+
+
+
 .president-card-2 {
    border: 1px solid #b27f4a;
    padding: 10px 20px;
@@ -970,7 +988,7 @@ h6 {
 }
 
 .img-2-president {
-   width: 30%;
+   width: 20%;
 }
 
 .upper-title {
@@ -1903,7 +1921,7 @@ h6 {
       border-radius: 20px;
    }
 
-    
+
 
 }
 
@@ -2046,6 +2064,39 @@ h6 {
    margin-bottom: 5px;
    border-radius: 12px;
 }
+.locationDiv {
+   /* padding: 46px; */
+    
+   gap: 20px;
+ }
+ .locationWrapper{
+   padding: 20px;
+ }
+
+.cardBox {
+   height: 300px;
+   width: 100%;
+   border: 1px solid #b27f4a;
+   border-radius: 25px;
+}
+.cardBox:hover {
+   height: 300px;
+   width: 100%;
+   border: 1px solid #b27f4a;
+   border-radius: 25px;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+   .contactRow {
+      padding: 0;
+   }
+   .cardHeading{
+      font-size: 30px;
+   }
+   .cardParagraph{
+      font-size: 20px !important;
+   }
+}
 
 @media only screen and (min-width:600px) and (max-width: 1000px) {
 
@@ -2066,26 +2117,30 @@ h6 {
    font-weight: 600;
    color: #b27f4a;
    text-align: center;
-   
+
 }
-.keyBenefitsMargin{
+
+.keyBenefitsMargin {
    margin: 30px 0;
 }
 
-.bitoAdvisorHeading{
+.bitoAdvisorHeading {
    font-size: 5rem;
-   color:#422a1d
+   color: #422a1d
 }
-.bitoAdvisorCard{
+
+.bitoAdvisorCard {
    display: flex;
    justify-content: center;
    align-items: center;
 }
-.bitoAdvisorSubHead{
+
+.bitoAdvisorSubHead {
    font-size: 6rem;
    color: #a0847c;
    line-height: 60px;
 }
-.bitAdvisorBtn{
+
+.bitAdvisorBtn {
    margin-top: 20px;
 }

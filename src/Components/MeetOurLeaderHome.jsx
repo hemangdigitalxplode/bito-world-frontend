@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Section3 from "../assets/chirag-paswan.png";
 import PravinKumar from "../assets/praveen.jpg";
-import Amresh from "../assets/amresh.jpg";
+import Amresh from "../assets/amresh.png";
 import Jeff from "../assets/Jheff.jpg";
 import anil from '../assets/anil-pratham.png'
 
@@ -300,7 +300,7 @@ const MeetOurLeaderHome = (props) => {
         </div>
       </div>
 
-      <h1 className="advisorHeading py-5">BITO Advisors</h1>
+      <h1 className="advisorHeading py-5">Who’s Who</h1>
 
       {/* Swiper Slider */}
       <Swiper

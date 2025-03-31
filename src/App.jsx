@@ -99,6 +99,7 @@ import uae29 from './assets/events/UAE-event/29.webp'
 import uae30 from './assets/events/UAE-event/30.webp'
 import OurWork from './Pages/OurWork'
 import BitoAdvisors from './Pages/BitoAdvisors'
+import ContactUs from './Pages/ContactUs'
 
 
 function slugify(text) {
@@ -158,6 +159,7 @@ const App = () => {
           <Route path="/membership-plans" element={<MembershipPlans />} />
           <Route path="/about" element={<About />} />
           <Route path="/our-work" element={<OurWork/>}/>
+          <Route path='/contact-us' element={<ContactUs/>} />
           <Route path='/bito-advisors' element={<BitoAdvisors/>}/>
           {/* Dynamic events page */}
           <Route path='/events' element={<Events events={events} />} />

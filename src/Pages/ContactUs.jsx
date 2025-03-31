@@ -1,13 +1,85 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 import InstagramLogo from '../assets/insta.png'
 import FacebookLogo from '../assets/facebook-logo.png'
 import YoutubeLogo from '../assets/youtube.png'
 import TwitterLogo from '../assets/twitter.png'
 import LinkedinLogo from '../assets/linkedin.png'
+import emailjs from "emailjs-com";
+import { useNavigate } from 'react-router-dom'
+
+
+
+const serviceId = "service_28p4dun";
+const templateId = "template_m8arbl4";
+const publicKey = "VMyL5IlII48LPmCIy";
+
 
 const ContactUs = () => {
+
+    const navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(false);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+    })
+
+    // Handle input change
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent page reload
+        setIsLoading(true);
+
+        // Validate required fields
+        if (!formData.name || !formData.email || !formData.message) {
+            alert("Please fill in all required fields.");
+            setIsLoading(false); // Stop loading if validation fails
+            return;
+        }
+
+        // Send data via EmailJS
+        emailjs
+            .send(
+                serviceId,
+                templateId,
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    subject: formData.subject,
+                    message: formData.message,
+                },
+                publicKey
+            )
+            .then(
+                (response) => {
+                    console.log("Email sent successfully!", response);
+                    setIsLoading(false); // Stop loading after success
+                    setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Reset form
+                    navigate("/thank-you"); // Redirect to Thank You page
+                },
+                () => {
+                    setIsLoading(false); // Stop loading after failure
+                    alert("Failed to send message. Please try again.");
+                },
+                (error) => {
+                    console.error("Error sending email:", error);
+                    alert("Failed to send message. Please try again.");
+                }
+            );
+
+    };
     return (
         <>
             <div>
@@ -93,12 +165,12 @@ const ContactUs = () => {
 
                                     </div>
                                     <div className="locationDiv mt-5">
-                                        <h4 className='cardHeading'>Email</h4>
-                                        <p className='cardParagraph'>office@bitoworld.in</p>
+                                        <h4 className='cardHeading'>Contact No.</h4>
+                                        <p className='cardParagraph'> 0120-4914498</p>
                                     </div>
                                     <div className="locationDiv">
-                                        <h4 className='cardHeading'>Phone No.</h4>
-                                        <p className='cardParagraph'>01204914498</p>
+                                        <h4 className='cardHeading'>Email Us</h4>
+                                        <p className='cardParagraph'>office@bitoworld.in</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,16 +179,16 @@ const ContactUs = () => {
                             <div className="cardBox mb-2">
                                 <div className="locationWrapper">
                                     <div className="locationDiv">
-                                        <h2>For Other Enquiry</h2>
+                                        <h2 className='cardHeading'>For Other Enquiry</h2>
 
                                     </div>
                                     <div className="locationDiv mt-5">
-                                        <h4 className='cardHeading'>Email</h4>
-                                        <p className='cardParagraph'>office@bitoworld.in</p>
+                                        <h4 className='cardHeading'>Contact No.</h4>
+                                        <p className='cardParagraph'> 0120-4914498</p>
                                     </div>
                                     <div className="locationDiv">
-                                        <h4 className='cardHeading'>Phone No.</h4>
-                                        <p className='cardParagraph'>01204914498</p>
+                                        <h4 className='cardHeading'>Email Us</h4>
+                                        <p className='cardParagraph'>office@bitoworld.in</p>
                                     </div>
                                 </div>
                             </div>
@@ -136,30 +208,28 @@ const ContactUs = () => {
                                         <div className="">
                                             <div className="card shadow-lg">
                                                 <div className="card-body">
-
-                                                    <form>
+                                                    <h2 className='cardHeading'>Enquire Now</h2>
+                                                    <form onSubmit={handleSubmit}>
                                                         <div className="mb-3">
 
-                                                            <input type="text" className="form-control" id="name" placeholder="Enter your name" />
+                                                            <input type="text" name='name' value={formData.name} onChange={handleChange} className="form-control" id="name" placeholder="Enter your name" />
+                                                        </div>
+                                                        <div className="mb-3">
+                                                            <input name='email' type="email" value={formData.email} onChange={handleChange} className="form-control" id="email" placeholder="Enter your email" />
                                                         </div>
                                                         <div className="mb-3">
 
-                                                            <input type="email" className="form-control" id="email" placeholder="Enter your email" />
+                                                            <input name='phone' value={formData.phone} onChange={handleChange} type="tel" className="form-control" id="phone" placeholder="Enter your phone number" minLength={10} maxLength={10} />
                                                         </div>
                                                         <div className="mb-3">
 
-                                                            <input type="tel" className="form-control" id="phone" placeholder="Enter your phone number" />
+                                                            <input value={formData.subject} onChange={handleChange} name='subject' type="text" className="form-control" id="subject" placeholder="Enter subject" />
                                                         </div>
                                                         <div className="mb-3">
-
-                                                            <input type="text" className="form-control" id="subject" placeholder="Enter subject" />
-                                                        </div>
-                                                        <div className="mb-3">
-
-                                                            <textarea className="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                                                            <textarea value={formData.message} onChange={handleChange} name='message' className="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
                                                         </div>
                                                         <div className="d-grid">
-                                                            <button type="submit" className="btn btn-primary contactBtn">Submit</button>
+                                                            <button disabled={isLoading} type="submit" className="btn btn-primary contactBtn">{isLoading ? "Submitting..." : "Submit"}</button>
                                                         </div>
                                                     </form>
                                                 </div>

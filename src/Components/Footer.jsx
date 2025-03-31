@@ -198,7 +198,7 @@ const Footer = () => {
         <Container className="py-3 mt-3 copyright">
           <Col lg={12}>
             <p className="footer-last-line text-center m-0">
-              Copyright © 2024 Bihar International Trade Organization (BITO)
+              Copyright © 2025 Bihar International Trade Organization (BITO)
             </p>
           </Col>
         </Container>

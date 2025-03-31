@@ -989,6 +989,7 @@ h6 {
 
 .img-2-president {
    width: 20%;
+   object-fit: cover;
 }
 
 .upper-title {

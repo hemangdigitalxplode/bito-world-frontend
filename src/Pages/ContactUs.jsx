@@ -1,6 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import InstagramLogo from '../assets/insta.png'
+import FacebookLogo from '../assets/facebook-logo.png'
+import YoutubeLogo from '../assets/youtube.png'
+import TwitterLogo from '../assets/twitter.png'
+import LinkedinLogo from '../assets/linkedin.png'
 
 const ContactUs = () => {
     return (
@@ -37,7 +42,26 @@ const ContactUs = () => {
                                         <p className='cardParagraph'>173, 7th Floor, Tower A, Corenthum, Sector 62, Opp. Electronic City Metro Station, Noida-201309 </p>
                                     </div>
                                     <h4 className='cardHeading'>Social Links</h4>
-                                    <div class="social-footer mt-3"> <div class="social-icons d-flex align-items-center"><a href="https://www.facebook.com/people/Bihar-International-Trade-Organisation/61553947718537/?mibextid=ZbWKwL"><img src="/src/assets/facebook-logo.png" alt="footer-social-logo" class="social-links-img" /></a><a href="/contact-us"><img src="/src/assets/insta.png" alt="footer-social-logo" class="social-links-img" /></a><a href="https://www.linkedin.com/company/bihar-international-trade-organisation/"><img src="/src/assets/linkedin.png" alt="footer-social-logo" class="social-links-img" /></a><a href="/contact-us"><img src="/src/assets/twitter.png" alt="footer-social-logo" class="social-links-img" /></a><a href="/contact-us"><img src="/src/assets/youtube.png" alt="footer-social-logo" class="social-links-img" /></a></div></div>
+                                    <div class="social-footer mt-3">
+                                        <div class="social-icons d-flex align-items-center">
+                                            <a href="https://www.facebook.com/people/Bihar-International-Trade-Organisation/61553947718537/?mibextid=ZbWKwL">
+                                                <img src={FacebookLogo} alt="footer-social-logo" class="social-links-img" />
+                                            </a>
+                                            <a href="/contact-us">
+                                                <img src={InstagramLogo} alt="footer-social-logo" class="social-links-img" />
+                                            </a>
+                                            <a href="https://www.linkedin.com/company/bihar-international-trade-organisation/">
+                                                <img src={LinkedinLogo} alt="footer-social-logo" class="social-links-img" />
+                                            </a>
+                                            <a href="/contact-us">
+                                                <img src={TwitterLogo} alt="footer-social-logo" class="social-links-img" />
+                                            </a>
+                                            <a href="/contact-us">
+                                                <img src={YoutubeLogo} alt="footer-social-logo" class="social-links-img" />
+                                            </a>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -55,7 +79,7 @@ const ContactUs = () => {
                                     </div>
                                     <div className="locationDiv">
                                         <h4 className='cardHeading'>Email Us</h4>
-                                        <p className='cardParagraph'>  office@bitoworld.in</p>
+                                        <p className='cardParagraph'>office@bitoworld.in</p>
                                     </div>
                                 </div>
 

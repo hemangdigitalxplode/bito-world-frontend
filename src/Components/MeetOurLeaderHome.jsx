@@ -3,7 +3,6 @@ import { useState } from "react";
 import Section3 from "../assets/chirag-paswan.png";
 import PravinKumar from "../assets/praveen.jpg";
 import Amresh from "../assets/amresh.png";
-import Jeff from "../assets/Jheff.jpg";
 import anil from '../assets/anil-pratham.png'
 import bannerBito from '../assets/bito-advisor-banner.jpg'
 
@@ -151,62 +150,7 @@ const leaders = [
         </p>
       </>
     ),
-  },
-  {
-    bitoAdvisor: false,
-    name: "Clr. Jeff Whitton FAICD",
-    role: "Honorary Global Advisor",
-    image: Jeff,
-    shortMsg: 'Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and entrepreneur...',
-    modalMessage: (
-      <>
-        <p>Dear All,</p>
-        <p>
-          Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and
-          entrepreneur with over three decades of industry leadership. With 20
-          years of dedicated service as a Local Government councillor, Jeff has
-          been a driving force in public service and community development,
-          leaving a lasting impact on the communities he serves. His exceptional
-          career spans 40 years in Digital Technology, Cybersecurity, and
-          Information Intelligence, making him a formidable expert in these
-          critical domains.
-        </p>
-        <p>
-          As a seasoned CEO and Board Chairman, Jeff is celebrated for his
-          visionary leadership and strategic acumen. He is a passionate advocate
-          for Regional Australia, where he has been a relentless champion for
-          initiatives that drive social, economic, and cultural transformation.
-          Jeff’s unwavering commitment to progress underscores his reputation as
-          a trailblazer who is deeply invested in shaping the future of
-          Australia’s regional landscapes.
-        </p>
-        <p>
-          In his capacity as a Global Advisor, Jeff Whitton is set to lead and
-          fortify the burgeoning partnership between Australia and India, with a
-          special focus on the Bihar International Trade Organisation (BITO). At
-          the core of BITO’s mission is the powerful concept of Bihari Asmita,
-          which champions the vibrant cultural identity and pride of Bihar. Jeff
-          is poised to advance BITO’s vision, propelling the revival and
-          celebration of Bihar’s rich traditions, arts, crafts, and heritage. He
-          recognizes that this cultural renaissance is vital for cultivating a
-          dynamic community of entrepreneurs and innovators who are rooted in
-          their heritage while striving for global excellence.
-        </p>
-        <p>
-          Jeff’s leadership will be a catalyst in forging strong collaborations
-          that bridge the cultural and economic ties between Australia and
-          India. His visionary approach will ensure that BITO continues to
-          ignite a deep sense of pride and belonging among Biharis, empowering
-          them to excel on the global stage. Under his stewardship, the
-          relationship between these two great nations, particularly through
-          BITO’s initiatives, is destined to flourish, creating transformative
-          opportunities that celebrate and elevate the rich cultural legacy of
-          Bihar.
-        </p>
-      </>
-    ),
-  },
-
+  }, 
   // New Leaders here
   {
     bitoAdvisor: true,

@@ -5,6 +5,7 @@ import PravinKumar from "../assets/praveen.jpg";
 import Amresh from "../assets/amresh.png";
 import Jeff from "../assets/Jheff.jpg";
 import anil from '../assets/anil-pratham.png'
+import bannerBito from '../assets/bito-advisor-banner.jpg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -210,7 +211,8 @@ const leaders = [
   {
     bitoAdvisor: true,
     name: "Anil Pratham",
-    bgColor: '#d8cec4',
+    bgColor: '#f5e0cb',
+    bannerImage: bannerBito,
     role: "IPS (Former DGP, Police Reforms), Gujarat",
     image: anil,
     shortMsg: 'Shri Anil Pratham, IPS, a distinguished officer and a dedicated leader...',
@@ -325,24 +327,15 @@ const MeetOurLeaderHome = (props) => {
         {leaders.map((leader, index) => (
           <SwiperSlide key={index}>
             {leader.bitoAdvisor ? (
-              <Link style={{textDecoration:'none'}} to={leader.redirectTo}>
+              <Link style={{ textDecoration: 'none' }} to={leader.redirectTo}>
                 <div className="col-12">
-                  <div style={{ background: `${leader.bgColor}` }} className="president-card premond bitoAdvisorCard">
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center ' }}>
-                      <h2 className="bitoAdvisorHeading">{leader.specialTitle}</h2>
-                      <h3 className="bitoAdvisorSubHead">{leader.specialHeading}</h3>
-                      <Button
-
-                        className="section-3-btn px-4 py-2 bitAdvisorBtn"
-                      >
-                        Explore More{" "}
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                      </Button>
-                    </div>
+                  <div style={{ background: `${leader.bgColor}` }} className="president-card-bitoAdvisors premond bitoAdvisorCard">
+                    <img className="w-100" src={leader.bannerImage} alt="" />
+                     
 
                   </div>
                 </div>
-              </Link> 
+              </Link>
             ) : <div className="col-12">
               <div className="president-card premond">
                 <div className="upper-title">

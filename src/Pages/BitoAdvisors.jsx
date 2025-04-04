@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import Section3 from "../assets/chirag-paswan.png";
 import anil from '../assets/anil-pratham.png'
 import Ashish from '../assets/ashish-mishra.png'
+import Prabhat from '../assets/prabhat-ranjan.png'
+import jeff from '../assets/Jheff.jpg'
 import { Button, Image, Modal } from 'react-bootstrap'
 
 const BitoAdvisors = (props) => {
@@ -18,8 +20,8 @@ const BitoAdvisors = (props) => {
     const bitoAdvisors = [
         {
             id: 1,
-            name: 'Shri Anil Pratham',
-            position: 'IPS (Former DGP, Police Reforms), Gujarat',
+            name: 'Shri Anil Kumar Pratham',
+            position: 'IPS (Ex-DGP) Gujarat Global Advisor | BITO',
             image: anil,
             shortMessage: (
                 <>
@@ -83,6 +85,112 @@ const BitoAdvisors = (props) => {
                         Let’s take pride in our roots and move forward with confidence. Jai Bihar! Jai Bharat!
                     </p>
 
+                </>
+            ),
+        },
+        {
+            id: 3,
+            name: 'Shri Prabhat Ranjan',
+            position: 'Vice Chancellor of D Y Patil International UniversityGlobal Advisor | BITO',
+            image: Prabhat,
+            shortMessage: (
+                <>
+                    <p>Dear All,</p>
+                    <p>
+                        Prof. Prabhat Ranjan, Vice Chancellor of D Y Patil International University, Akurdi, Pune, is a visionary leader bridging the realms of cutting-edge science, transformative education, and national policy. His career is a testament to his multifaceted expertise as a Nuclear Fusion Scientist, Futurist, Educator, Innovator, and Science Communicator.
+                    </p>
+                </>
+            ),
+            modalMessage: (
+                <>
+                    <p>Dear All,</p>
+                    <p>
+                        Prof. Prabhat Ranjan, Vice Chancellor of D Y Patil International University, Akurdi, Pune, is a visionary leader bridging the realms of cutting-edge science, transformative education, and national policy. His career is a testament to his multifaceted expertise as a Nuclear Fusion Scientist, Futurist, Educator, Innovator, and Science Communicator.
+                    </p>
+                    <p>
+                        His foundational education, rooted in the Gurukul tradition at Netarhat School, was further strengthened by degrees from the University of Delhi, IIT Kharagpur, and a PhD in Nuclear Fusion from the University of California, Berkeley. This rigorous academic background provided the bedrock for nearly two decades of research in nuclear fusion at prestigious national laboratories in the US and India.
+                    </p>
+                    <p>
+                        Transitioning to academia, Prof. Ranjan spent 11 years as a Professor at DA-IICT, Gandhinagar, where his innovative spirit flourished. His contributions extend beyond theoretical research, encompassing practical applications in India’s Moon Mission, wildlife conservation, assistive technology, and Brain-Computer Interfaces, demonstrating a commitment to solving real-world challenges.
+                    </p>
+                    <p>
+                        From 2013 to 2018, as head of India's Technology Think Tank, TIFAC, Delhi, he shaped the nation's technological trajectory. He spearheaded the development of critical policy documents, most notably the "Technology Vision 2035," which continues to guide India's technological advancement.
+                    </p>
+                    <p>
+                        As Vice Chancellor, Prof. Ranjan is revolutionizing higher education by implementing forward-thinking curricula that are setting national benchmarks. His leadership extends to critical national initiatives, including: He is spearheading many Govt of India effort to promote new technology across country e.g. digital fabrication ,  Brain-Computer Interface
+                    </p>
+                    <p>
+                        His contributions have been recognized with numerous prestigious awards. Prof. Ranjan's visionary leadership has been highlighted by "Outlook" magazine, recognizing him as a key figure in driving India towards a 5 trillion dollar economy two years in a row. He is also recognized among the top "100 Great IITians : Dedicated to the Service of the Nation".
+                    </p>
+
+                </>
+            ),
+        },
+        {
+            id: 4,
+            name: 'Clr. Jeff Whitton FAICD',
+            position: 'Honorary Global Advisor',
+            image: jeff,
+            shortMessage: (
+                <>
+                    <p>Dear All,</p>
+                    <p>
+                        Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and
+                        entrepreneur with over three decades of industry leadership. With 20
+                        years of dedicated service as a Local Government councillor, Jeff has
+                        been a driving force in public service and community development,
+                        leaving a lasting impact on the communities he serves. His exceptional
+                        career spans 40 years in Digital Technology, Cybersecurity, and
+                        Information Intelligence, making him a formidable expert in these
+                        critical domains.
+                    </p>
+                </>
+            ),
+            modalMessage: (
+                <>
+                    <p>Dear All,</p>
+                    <p>
+                        Clr. Jeff Whitton FAICD, is an esteemed Australian businessman and
+                        entrepreneur with over three decades of industry leadership. With 20
+                        years of dedicated service as a Local Government councillor, Jeff has
+                        been a driving force in public service and community development,
+                        leaving a lasting impact on the communities he serves. His exceptional
+                        career spans 40 years in Digital Technology, Cybersecurity, and
+                        Information Intelligence, making him a formidable expert in these
+                        critical domains.
+                    </p>
+                    <p>
+                        As a seasoned CEO and Board Chairman, Jeff is celebrated for his
+                        visionary leadership and strategic acumen. He is a passionate advocate
+                        for Regional Australia, where he has been a relentless champion for
+                        initiatives that drive social, economic, and cultural transformation.
+                        Jeff’s unwavering commitment to progress underscores his reputation as
+                        a trailblazer who is deeply invested in shaping the future of
+                        Australia’s regional landscapes.
+                    </p>
+                    <p>
+                        In his capacity as a Global Advisor, Jeff Whitton is set to lead and
+                        fortify the burgeoning partnership between Australia and India, with a
+                        special focus on the Bihar International Trade Organisation (BITO). At
+                        the core of BITO’s mission is the powerful concept of Bihari Asmita,
+                        which champions the vibrant cultural identity and pride of Bihar. Jeff
+                        is poised to advance BITO’s vision, propelling the revival and
+                        celebration of Bihar’s rich traditions, arts, crafts, and heritage. He
+                        recognizes that this cultural renaissance is vital for cultivating a
+                        dynamic community of entrepreneurs and innovators who are rooted in
+                        their heritage while striving for global excellence.
+                    </p>
+                    <p>
+                        Jeff’s leadership will be a catalyst in forging strong collaborations
+                        that bridge the cultural and economic ties between Australia and
+                        India. His visionary approach will ensure that BITO continues to
+                        ignite a deep sense of pride and belonging among Biharis, empowering
+                        them to excel on the global stage. Under his stewardship, the
+                        relationship between these two great nations, particularly through
+                        BITO’s initiatives, is destined to flourish, creating transformative
+                        opportunities that celebrate and elevate the rich cultural legacy of
+                        Bihar.
+                    </p> 
                 </>
             ),
         }

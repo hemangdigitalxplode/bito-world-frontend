@@ -198,7 +198,7 @@ const Home = (props) => {
 
       {/* Third section */}
       {/* Bito advisors section below */}
-      {/* <MeetOurLeaderHome /> */}
+      <MeetOurLeaderHome />
 
 
       {/* Original section */}

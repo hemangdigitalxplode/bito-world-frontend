@@ -948,6 +948,13 @@ h6 {
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
    background: white;
 }
+.president-card-bitoAdvisors{
+   border: 1px solid #b27f4a;
+   padding: 10px 20px;
+   border-radius: 20px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   background: white;
+}
 
 .contactBtn {
    background-color: #b27f4a;

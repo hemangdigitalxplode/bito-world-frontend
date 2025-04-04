@@ -217,8 +217,7 @@ const ContactUs = () => {
                                                         <div className="mb-3">
                                                             <input name='email' type="email" value={formData.email} onChange={handleChange} className="form-control" id="email" placeholder="Enter your email" />
                                                         </div>
-                                                        <div className="mb-3">
-
+                                                        <div className="mb-3"> 
                                                             <input name='phone' value={formData.phone} onChange={handleChange} type="tel" className="form-control" id="phone" placeholder="Enter your phone number" minLength={10} maxLength={10} />
                                                         </div>
                                                         <div className="mb-3">

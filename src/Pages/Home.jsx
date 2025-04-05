@@ -202,7 +202,7 @@ const Home = (props) => {
 
 
       {/* Original section */}
-      <MeetOurVisionaryLeader/>
+      {/* <MeetOurVisionaryLeader/> */}
 
       {/* Fifth Section */}
 

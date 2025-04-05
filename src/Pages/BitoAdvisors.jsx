@@ -21,7 +21,7 @@ const BitoAdvisors = (props) => {
         {
             id: 1,
             name: 'Shri Anil Kumar Pratham',
-            position: 'IPS (Ex-DGP) Gujarat Global Advisor | BITO',
+            position: 'IPS (Ex-DGP) Gujarat, Global Advisor | BITO',
             image: anil,
             shortMessage: (
                 <>
@@ -56,42 +56,11 @@ const BitoAdvisors = (props) => {
                 </>
             ),
         },
-        {
-            id: 2,
-            name: 'Shri Ashish Mishra',
-            position: 'Venture Capitalist | Entrepreneur | Strategic Advisor',
-            image: Ashish,
-            shortMessage: (
-                <>
-                    <p>Dear All,</p>
-                    <p>
-                        Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist and Entrepreneur, renowned for his contributions to the various industries including FMCG, Electric Vehicles (EV), Sports, renewable energy, and financial sectors. With a proven track record in business strategy, investment, and scaling high-growth ventures, he brings invaluable expertise to BITO’s strategic initiatives.
-                    </p>
-                </>
-            ),
-            modalMessage: (
-                <>
-                    <p>Dear All,</p>
-                    <p>
-                        Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist and Entrepreneur, renowned for his contributions to the various industries including FMCG, Electric Vehicles (EV), Sports, renewable energy, and financial sectors. With a proven track record in business strategy, investment, and scaling high-growth ventures, he brings invaluable expertise to BITO’s strategic initiatives.
-                    </p>
-                    <p>
-                        With an unwavering commitment to scalability, impact-driven investments, and cross-sectoral synergies, Shri Ashish Mishra plays a pivotal role in bridging finance, technology, and ventures. His global investment insights and strategic acumen will empower BITO to identify emerging market opportunities, foster innovation, and drive meaningful economic growth.
-                    </p>
-                    <p>
-                        As an Advisor to BITO, he will provide thought leadership, mentorship, and strategic direction, enhancing BITO’s capabilities in fostering entrepreneurial excellence, innovation-led investments, and global partnerships.
-                    </p>
-                    <p>
-                        Let’s take pride in our roots and move forward with confidence. Jai Bihar! Jai Bharat!
-                    </p>
-
-                </>
-            ),
-        },
+     
         {
             id: 3,
             name: 'Shri Prabhat Ranjan',
-            position: 'Vice Chancellor of D Y Patil International UniversityGlobal Advisor | BITO',
+            position: 'Vice Chancellor of D Y Patil International University, Global Advisor | BITO',
             image: Prabhat,
             shortMessage: (
                 <>
@@ -193,7 +162,39 @@ const BitoAdvisors = (props) => {
                     </p> 
                 </>
             ),
-        }
+        },
+        {
+            id: 2,
+            name: 'Shri Ashish Mishra',
+            position: 'Venture Capitalist | Entrepreneur | Strategic Advisor',
+            image: Ashish,
+            shortMessage: (
+                <>
+                    <p>Dear All,</p>
+                    <p>
+                        Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist and Entrepreneur, renowned for his contributions to the various industries including FMCG, Electric Vehicles (EV), Sports, renewable energy, and financial sectors. With a proven track record in business strategy, investment, and scaling high-growth ventures, he brings invaluable expertise to BITO’s strategic initiatives.
+                    </p>
+                </>
+            ),
+            modalMessage: (
+                <>
+                    <p>Dear All,</p>
+                    <p>
+                        Shri Ashish Mishra is a distinguished United Kingdom based Venture Capitalist and Entrepreneur, renowned for his contributions to the various industries including FMCG, Electric Vehicles (EV), Sports, renewable energy, and financial sectors. With a proven track record in business strategy, investment, and scaling high-growth ventures, he brings invaluable expertise to BITO’s strategic initiatives.
+                    </p>
+                    <p>
+                        With an unwavering commitment to scalability, impact-driven investments, and cross-sectoral synergies, Shri Ashish Mishra plays a pivotal role in bridging finance, technology, and ventures. His global investment insights and strategic acumen will empower BITO to identify emerging market opportunities, foster innovation, and drive meaningful economic growth.
+                    </p>
+                    <p>
+                        As an Advisor to BITO, he will provide thought leadership, mentorship, and strategic direction, enhancing BITO’s capabilities in fostering entrepreneurial excellence, innovation-led investments, and global partnerships.
+                    </p>
+                    <p>
+                        Let’s take pride in our roots and move forward with confidence. Jai Bihar! Jai Bharat!
+                    </p>
+
+                </>
+            ),
+        },
     ]
     return (
         <div>
